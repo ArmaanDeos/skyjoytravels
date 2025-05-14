@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://skyjoytravels.online
+
+# Sitemaps
+Sitemap: https://skyjoytravels.online/sitemap.xml
