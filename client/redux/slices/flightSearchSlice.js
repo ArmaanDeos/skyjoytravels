@@ -6,7 +6,7 @@ export const searchFlights = createAsyncThunk(
   async (params, thunkAPI) => {
     try {
       const response = await axios.post(
-        "https://airtravel-backend.onrender.com/api/flights/search",
+        "https://skyjoy-api.onrender.com/api/flights/search",
         params
       );
       return response.data;

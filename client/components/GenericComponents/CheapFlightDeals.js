@@ -24,30 +24,32 @@ const departureCities = [
   { city: "San Francisco", code: "SFO" },
 ];
 
-const CheapFlightDeals = () => {
+const CheapFlightDeals = ({ brandName = "SkyjoyTravels" }) => {
   const [fromCity, setFromCity] = useState(departureCities[0]);
 
   return (
     <section className="bg-gradient-to-r from-blue-50 to-purple-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto text-center mb-10">
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-          Cheap Flight Deals
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-3">
+          {brandName}’s Best Flight Deals
         </h2>
-        <p className="text-gray-600 text-lg mb-4">
-          Book now and save on flights to the world’s most popular destinations.
+        <p className="text-gray-600 text-lg">
+          Save big on flights to top destinations when you book with {brandName}
+          .
         </p>
 
-        <div className="mb-6">
+        <div className="mt-6">
           <label className="block text-gray-700 font-medium mb-2 text-lg">
-            Select Departure City:
+            Select Your Departure City:
           </label>
           <select
             value={fromCity.code}
-            onChange={(e) =>
-              setFromCity(
-                departureCities.find((city) => city.code === e.target.value)
-              )
-            }
+            onChange={(e) => {
+              const selected = departureCities.find(
+                (city) => city.code === e.target.value
+              );
+              setFromCity(selected);
+            }}
             className="px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-blue"
           >
             {departureCities.map((city) => (
@@ -85,7 +87,7 @@ const CheapFlightDeals = () => {
                 href="tel:+1-(888) 370-1612"
                 className="rounded-full text-sm px-6 py-2 font-semibold text-white bg-gradient-to-r from-primary-blue to-primary-red hover:from-primary-red hover:to-primary-blue shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
-                Book Now
+                Call & Book
               </a>
             </div>
           </div>

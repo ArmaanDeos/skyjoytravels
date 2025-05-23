@@ -121,7 +121,9 @@ export default function RootLayout({ children }) {
         className={`${roboto.variable} ${windSong.variable} ${poppins.variable} antialiased`}
       >
         <Providers> {children}</Providers>
-        <FixedButton />
+        <div className="hidden md:block">
+          <FixedButton />
+        </div>
       </body>
     </html>
   );

@@ -26,7 +26,7 @@ const FixedButton = () => {
     <div className="fixed bottom-5 right-5 flex flex-col space-y-3 z-50">
       {/* CTA Button */}
       <a
-        href="tel:+1-(844) 408-2510"
+        href="tel:+1-(888) 370-1612"
         className="bg-primary-red text-white flex items-center justify-center p-3 rounded-full shadow-lg hover:bg-red-600 transition duration-300"
         title="Call Now"
       >

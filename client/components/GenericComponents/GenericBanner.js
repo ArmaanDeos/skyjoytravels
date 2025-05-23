@@ -31,30 +31,6 @@ const GenericBanner = ({
           {/* Tabs */}
           <div className="hidden md:block">
             <Tabs defaultValue="flights">
-              <TabsList className="bg-white/90 backdrop-blur-md rounded-none shadow-md px-2 py-1 flex flex-wrap gap-2 justify-start md:justify-center">
-                <TabsTrigger
-                  value="flights"
-                  className="flex items-center gap-2 px-4 py-2 rounded-none text-sm font-semibold text-gray-700 hover:bg-primary-blue hover:text-white transition-all duration-300 data-[state=active]:bg-primary-red data-[state=active]:text-white"
-                >
-                  <Plane className="w-4 h-4" />
-                  Flights
-                </TabsTrigger>
-                <TabsTrigger
-                  value="hotels"
-                  className="flex items-center gap-2 px-4 py-2 rounded-none text-sm font-semibold text-gray-700 hover:bg-primary-blue hover:text-white transition-all duration-300 data-[state=active]:bg-primary-red data-[state=active]:text-white"
-                >
-                  <Hotel className="w-4 h-4" />
-                  Hotels
-                </TabsTrigger>
-                <TabsTrigger
-                  value="vacations"
-                  className="flex items-center gap-2 px-4 py-2 rounded-none text-sm font-semibold text-gray-700 hover:bg-primary-blue hover:text-white transition-all duration-300 data-[state=active]:bg-primary-red data-[state=active]:text-white"
-                >
-                  <Palmtree className="w-4 h-4" />
-                  Vacations
-                </TabsTrigger>
-              </TabsList>
-
               {/* Tab Content */}
               <TabsContent value="flights">
                 <Suspense fallback={<div>Loading...</div>}>
